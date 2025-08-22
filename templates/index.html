@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+  <div class="hero-text">
+    <h1>Compassionate IVF Care</h1>
+    <p>Book an appointment and learn about the IVF journey—from fertilization to gestation—in an interactive 3D experience.</p>
+    <div class="actions">
+      <a href="{{ url_for('book') }}" class="btn primary">Book Appointment</a>
+      <a href="{{ url_for('learn') }}" class="btn">Learn IVF</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="orb"></div>
+  </div>
+</section>
+{% endblock %}
