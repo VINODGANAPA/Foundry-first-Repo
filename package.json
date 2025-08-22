@@ -1,0 +1,35 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VINODGANAPA/Foundry-first-Repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VINODGANAPA/Foundry-first-Repo/issues"
+  },
+  "homepage": "https://github.com/VINODGANAPA/Foundry-first-Repo#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

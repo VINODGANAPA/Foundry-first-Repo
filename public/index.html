@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>IVF Clinic - Book Appointment</title>
+	<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<h1>IVF Journey</h1>
+			<p>Explore the IVF process and book your consultation.</p>
+		</div>
+	</header>
+
+	<main class="container">
+		<section class="grid">
+			<div class="panel">
+				<h2>3D IVF Walkthrough</h2>
+				<p>Use the controls to navigate stages: fertilization, embryo development, implantation, and gestation.</p>
+				<div id="canvas-container">
+					<canvas id="ivf-canvas"></canvas>
+				</div>
+				<div class="controls">
+					<button data-scene="fertilization">Fertilization</button>
+					<button data-scene="cleavage">Cleavage</button>
+					<button data-scene="blastocyst">Blastocyst</button>
+					<button data-scene="implantation">Implantation</button>
+					<button data-scene="gestation">Gestation</button>
+				</div>
+			</div>
+
+			<div class="panel">
+				<h2>Book an Appointment</h2>
+				<form id="booking-form">
+					<label>
+						Name
+						<input type="text" name="name" required />
+					</label>
+					<label>
+						Email
+						<input type="email" name="email" required />
+					</label>
+					<label>
+						Phone
+						<input type="tel" name="phone" />
+					</label>
+					<label>
+						Preferred Date
+						<input type="date" name="preferred_date" required />
+					</label>
+					<label>
+						Message (optional)
+						<textarea name="message" rows="4"></textarea>
+					</label>
+					<button type="submit">Submit</button>
+					<p id="form-status" role="status" aria-live="polite"></p>
+				</form>
+
+				<div class="appt-list">
+					<h3>Recent Appointments</h3>
+					<ul id="appointments"></ul>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<p>© <span id="year"></span> IVF Clinic Demo</p>
+		</div>
+	</footer>
+
+	<script type="module" src="/js/app.js"></script>
+</body>
+</html>
