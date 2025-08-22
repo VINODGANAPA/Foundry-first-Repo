@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Appointment Confirmed</h2>
+{% if appointment %}
+  <div class="card">
+    <p><strong>ID:</strong> {{ appointment.id or appointment['id'] }}</p>
+    <p><strong>Name:</strong> {{ appointment.full_name or appointment['full_name'] }}</p>
+    <p><strong>Email:</strong> {{ appointment.email or appointment['email'] }}</p>
+    <p><strong>Phone:</strong> {{ appointment.phone or appointment['phone'] }}</p>
+    <p><strong>Date:</strong> {{ appointment.date or appointment['date'] }}</p>
+    <p><strong>Time:</strong> {{ appointment.time or appointment['time'] }}</p>
+  </div>
+{% else %}
+  <p>Appointment details unavailable.</p>
+{% endif %}
+<div class="actions">
+  <a class="btn" href="{{ url_for('index') }}">Back to Home</a>
+  <a class="btn primary" href="{{ url_for('learn') }}">Explore IVF in 3D</a>
+</div>
+{% endblock %}
